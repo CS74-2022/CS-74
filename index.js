@@ -24,5 +24,4 @@ require('./middleware/App')(app, passport)
 app.use(auth)
 app.use(user)
 
-app.get('/',ensureAuthenticated,  (req, res)=> res.status(302).render('index', {user: req.user}))
-app.get('/:id',  (req, res)=> res.status(302).render('index'))
+app.get('/',ensureAuthenticated,  (req, res)=> res.status(302).render('index'))

@@ -5,12 +5,14 @@
         <div class="text-red-500 m-2 text-sm">
             <%- include('./err/messages.ejs') %> 
         </div>
-        <form id="form" method="post" action="/service/QFghkzxSkRWKwEJNI7sROjNeSq33">
+        <form id="form" method="post" action="/service">
+            <input type="text" hidden name="ss" id="UserIdGoogleAccount" value="<%= contact.userId %>">
             <div class="mb-4">
                 <label for="nameCenter" class="sr-only">Center Name</label>
                 <input type="text" name="nameCenter" id="nameCenter" placeholder="Center Name"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="<%= typeof nameCenter != 'undefined' ? nameCenter : '' %>">
             </div>
+
             <div class="mb-4">
                 <label for="serviceType" class="sr-only">Username</label>
                 <select id="serviceType" name="serviceType">

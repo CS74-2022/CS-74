@@ -1,7 +1,6 @@
 // 
 const form = document.querySelector('#form')
 const signInWithGoogleButton = document.getElementById('signInWithGoogle');
-
 // firebase Config
 const config = {
     apiKey: "AIzaSyAl4O5bLxRPuBChntdJDmugQXy_GYMNQyw",
@@ -24,10 +23,11 @@ const signInWithGoogle = () => {
     FirebaseAuth.signInWithPopup(googleProvider)
         .then((cred) => {
             return FirebaseStore.collection('user').doc(cred.user.uid).set({
+                userId : cred.user.uid,
                 username: cred.user.displayName,
                 email: cred.user.email,
                 ProfilePic: cred.user.photoURL
-            }).then(()=> {
+            }).then(()=> { 
                 window.location.assign(`/service/${cred.user.uid}`)
             })
         }).catch(error => {
