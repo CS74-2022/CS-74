@@ -1,0 +1,34 @@
+<%- include('./include/header.ejs') %> 
+
+<div class="flex justify-center">
+    <div class="w-4/12 m-10 bg-white p-6 rounded-lg ">
+        <div class=" justify-center ">
+            <button id="signInWithGoogle" class="bg-gray-200 rounded-3xl mb-3 text-center px-4 py-3 font-medium w-full">
+                <i class="fa-brands fa-google m-3"></i><span class="m-3">Login with your Google</span> 
+            </button>
+        </div>
+            <%- include('./err/messages.ejs') %> 
+        <form action="/login" method="post">
+
+            <div class="mb-4">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" name="email" id="email" placeholder="Your email..."
+                        class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="<%= typeof email != 'undefined' ? email : '' %>">
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" name="password" id="password" placeholder="Your password..."
+                        class="bg-gray-100 border-2 w-full p-4 rounded-lg " value="<%= typeof password != 'undefined' ? password : '' %>" >
+            </div>
+
+            <a href="/signUp" class="text-blue-500">Create Account</a>
+
+            <div>
+                <button type="submit" class=" bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include('./include/footer.ejs') %> 
