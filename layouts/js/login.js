@@ -26,12 +26,18 @@ const signInWithGoogle = () => {
                 userId : cred.user.uid,
                 username: cred.user.displayName,
                 email: cred.user.email,
-                ProfilePic: cred.user.photoURL
+                ProfilePic: cred.user.photoURL,
+                input: true
             }).then(()=> { 
-                window.location.assign(`/service/${cred.user.uid}`)
+                window.location.assign(`/${cred.user.uid}`)
             })
         }).catch(error => {
             console.error(error);
         })
 }
 signInWithGoogleButton.addEventListener('click', signInWithGoogle);
+
+FirebaseAuth.onAuthStateChanged(user => {
+    if(user && (state === 0))
+        window.location.assign(`/`);
+})

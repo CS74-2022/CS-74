@@ -5,15 +5,23 @@ const { maxAge, CreateTokenUserId, CreateTokenUserName, CreateTokenUserPassword 
 
 // Get Login && Register Page
 router.get('/service/:id', async (req, res)=>{
-
     const doc = await FirebaseStore.collection("user").doc(req.params.id).get();
-
-
-    res.status(302).render('service', { contact: { id: doc.id, ...doc.data() }})
+    res.status(302).render('Page/service', { contact: { id: doc.id, ...doc.data() }})
 })
 router.post('/service', async (req, res)=>{
-    const id = req.body.ss
-    console.log(id)
+    const User_id = req.body.userId
+    const {address, serviceType, nameCenter, phoneNumber} = req.body;
+    const update_data = await FirebaseStore.collection('user').doc(User_id).update({
+        address: address, 
+        serviceType: serviceType, 
+        nameCenter: nameCenter, 
+        phoneNumber: phoneNumber,
+        input: true,
+    })
+    res.status(200).redirect(`/${User_id}`)
 })
-
+router.get('/:id', async (req, res)=>{
+    const doc = await FirebaseStore.collection("user").doc(req.params.id).get();
+    res.status(302).render('index', { contact: { id: doc.id, ...doc.data() }})
+})
 module.exports = router;
