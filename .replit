@@ -1,2 +1,0 @@
-language_use = "nodejs"
-run_dev = "node index.js"

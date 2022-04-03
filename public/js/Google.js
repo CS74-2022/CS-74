@@ -1,7 +1,5 @@
-// 
-const form = document.querySelector('#form')
 const signInWithGoogleButton = document.getElementById('signInWithGoogle');
-const signInWithFaceBookButton = document.getElementById('signInWithFaceBook');
+
 // firebase Config
 const config = {
     apiKey: "AIzaSyAl4O5bLxRPuBChntdJDmugQXy_GYMNQyw",
@@ -21,7 +19,7 @@ const FirebaseStore = firebase.firestore();
 const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
 
-    FirebaseAuth.signInWithRedirect(googleProvider)
+    FirebaseAuth.signInWithPopup(googleProvider)
         .then((cred) => {
             return FirebaseStore.collection('user').doc(cred.user.uid).set({
                 userId : cred.user.uid,
@@ -36,22 +34,7 @@ const signInWithGoogle = () => {
         })
 }
 signInWithGoogleButton.addEventListener('click', signInWithGoogle);
-
-const signInWithFaceBook = ()=>{
-    const facebookProvider = new firebase.auth.FacebookAuthProvider();
-
-    FirebaseAuth.signInWithPopup(facebookProvider)
-        .then(()=>{
-            window.location.assign(`/Home`)
-        }).catch(error => {
-            console.error(error);
-        })
-}
-
-signInWithFaceBookButton.addEventListener('click', signInWithFaceBook)
-
 FirebaseAuth.onAuthStateChanged(user => {
     if(user)
         window.location.assign(`/Home/${user.uid}`);
 })
-

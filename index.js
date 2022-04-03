@@ -1,19 +1,19 @@
 const express = require('express');
+const {FirebaseStore, FirebaseAuth} = require('./firebase-admin')
 const app = express();
-const auth = require('./router/Auth')
-const user = require('./router/User')
-const post = require('./router/Posts')
-require('dotenv').config();
+const passport = require('passport')
+const auth = require('./routers/auth.routes')
+require('./Config/passport')(passport);
+require('./middleware/app')(app, passport);
 
-//Connect MongoDB
-const port = process.env.PORT || 1999
-app.listen(port, ()=>{
-    console.log(process.env.URL_HOST)
+app.get('/Home/:id', async (req, res)=>{
+    const doc = await FirebaseStore.collection("user").doc(req.params.id).get();
+    const doc2 = await FirebaseStore.collection("Service").doc(req.params.id).get();
+
+    res.status(302).render('page/hamePage', { contact: { id: doc.id, ...doc.data() }, service: {id: doc2.id, ...doc2.data()}})
 })
-// middleware
-require('./middleware/App')(app)
 
-// Router
 app.use(auth)
-app.use(user)
-app.use(post)
+app.listen(1999,()=>{
+    console.log('http://localhost:1999')
+})

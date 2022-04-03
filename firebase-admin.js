@@ -1,9 +1,10 @@
 const admin = require('firebase-admin');
-const serviceAccount = require('./firebase.json');
+const serviceAccount = require('./wedding-organizer.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
-})
+});
+
 
 const FirebaseStorage = admin.storage();
 const FirebaseAuth = admin.auth();

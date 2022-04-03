@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wedding-organizer-1",
+  "private_key_id": "e7197ec91e5c7842dadbb3fb57b7fbd4457d5bdd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC0s1YnGIWKBkzI\nmW7qOGRXikaXieQBQaZKV0ho4batmdMZek57DFeYhRE93KxWrRsIjt9Q5/ZNGBkx\nY1HsHnM46ku0oqmDFB95Zwh9230ukZpfRLRi9j6O0Y0mRr3B+Ri7CcJ1XU2Z402h\niNIvAEo8bePQZ+lrClEIh23PdUCUviBwnW0ZIFo6OH377HG0Q11+TQvf4vjA7jte\n1nVMFiXBqvPkI6sqc0rW0fReD0r+lwAZhzwqQ8PjqRVklrqDBMwEIHjgO0glLHhm\nSpB/cm/KsUjXsXU7C9fRGMvL9FqmUSMVi/9/zr4+6l8ZI/o1FVv7UdfExDGuxI/J\neNggBBonAgMBAAECggEAU/snNqtYYPIVnINmv5du1xqOPV6aJ5VVziYroocIij08\nFZK4x8pQKbPqc/hL5kq0jjEsi6MK3wCssL3qtJTgUxrdDXot0xw2losysJ+iWdLU\nzqMVPQsZvvGYKqplBbIZ8s+R3076QmOYUFNQ8AQv/E7MOq8YliVozNB4Uhs55QaC\nA1rozgZmNjfAmAazONYLY5oZmDBdPYiY6h2Yz1RkgKbollh+oepl2EAIolSERd1N\nwnn5WLtT0qhF67QOfl1xglf+hsFEQWY+j6ADe9irHEen7EofJ3Q9m2Q2zmoLF7mg\nUXaQBu2odx9FsftF9tWpFsyXii2Np7VWdiT8lTdJMQKBgQDbKG9jcQE6qS8HcLkB\nU1iAS4MoznygkA4C1zl3PjEXiFjHWj3RWTMu+2PGLE67ZuobJIbnKODQzvgIhc4t\n591MT2mOaVf9bs9LK13x0LQUlz1SnFtSAHgyCIk8TU034LcsjwgWZoZr7H6aY/NL\nj25O0OG0JfkqFHBZxvOMF6mQUQKBgQDTE95XYI+Lg30VCD8KMirRr8pPTbaqk48U\nn0+KxPWvn1cUljokwHhGxFsW+Qn8LRWEao7xfWuI32mKeRN+b6SMNcAZa51M1UxS\nLu4OYWJAct2Ufe2OYclRAatTCqQ/qmSasFSe3fA0qbmCxxwQxNig1Nhus/fosROq\nDmBPNlEc9wKBgB5iRr8kpaT6W7jOWffjFDwFPBPmPMUN88NVD3SGvMukbZqF2lgx\n47S5yaVp8yhsJjzJHaLiufh5GU4lLuaSZM31nI7P8BEE0dx8ELQ72RuZtDjF0KtX\nwVI+eLhRh0kd8IdO9TIV2MERsqO5A7wQEJ0AvKn7McYxuznXKWDczvdhAoGAOT4B\nJTcVlqNBD6wd1HkIbbc7qUgNCrNbsR8HJj4F1uviZL3c5Myhkad8gH1nPNFJLZDs\nVQdLW2IjMB9nrvk96ZxGDV7G2Ohbe0oo2xOD3rCH8NY5z0wrmWFXgfy30GA4Sk8Z\nk7/ifZWtro6qyM1pZixyyYra52rmR08AxVqYor8CgYAOy1FJcDb9EUZnKGIHTB49\n73OipBtqL3g6wYcBWrbu/VLgrHXaq8neW6xjdeVbsmO0+oDguC0vwW0S+nLGrnib\nGC/qfSJovkttIW5fDl71T731pgaag7R2qwUsKHQKqKJjM2kB3t/ESw2m2t8U/QET\nAArotmSYa3Cn5cg1zV2ftw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-mp3nz@wedding-organizer-1.iam.gserviceaccount.com",
+  "client_id": "118337856102450270123",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-mp3nz%40wedding-organizer-1.iam.gserviceaccount.com"
+}
