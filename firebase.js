@@ -17,12 +17,6 @@ const FirebaseStorageMultipleImageUploadMethod = async file => {
             resolve({
                 res: res.secure_url
             })
-        },{
-            metadata: {
-                metadata: {
-                    firebaseStorageDownloadTokens: uuid,
-                }
-            },
         })
     })
 }
@@ -37,4 +31,4 @@ const urls = [];
         }
 */
 
-module.exports = {FirebaseStorageMultipleImageUploadMethod, FirebaseAuth, FirebaseStore};
+module.exports = {FirebaseStorageMultipleImageUploadMethod, FirebaseStorage, FirebaseAuth, FirebaseStore};

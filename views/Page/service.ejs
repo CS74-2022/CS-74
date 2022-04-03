@@ -5,8 +5,8 @@
         <div class="text-red-500 m-2 text-sm">
             <%- include('../err/messages.ejs') %> 
         </div>
-        <form id="form" method="post" action="/service">
-            <input type="text" hidden name="userId" id="UserIdGoogleAccount" value="<%= contact.userId %>">
+        <form id="form" method="post" action="/service" enctype="multipart/form-data">
+            <input type="text" hidden name="userId" id="UserIdGoogleAccount" value="<%= user.userId %>">
             <div class="mb-4">
                 <label for="nameCenter" class="sr-only">Center Name</label>
                 <input type="text" name="nameCenter" id="nameCenter" placeholder="Center Name"
@@ -34,6 +34,11 @@
                 <label for="Facebook" class="sr-only">Facebook Link</label>
                 <input type="text" name="Facebook" id="Facebook" placeholder="Facebook Link"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="<%= typeof Facebook != 'undefined' ? Facebook : '' %>">
+            </div>
+            <div class="mb-4">
+                <label for="img" class="sr-only">Main Image</label>
+                <input type="file" name="img" id="img" placeholder="Main Image"
+                        class="bg-gray-100 border-2 w-full p-4 rounded-lg">
             </div>
             <div>
                 <button type="submit" class=" bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Send</button>

@@ -13,4 +13,5 @@ module.exports = (app) => {
     app.use(express.json());
     app.use(express.static('layouts'))
     app.use( express.static('image'))
+
 }
