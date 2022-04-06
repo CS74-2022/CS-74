@@ -1,0 +1,63 @@
+<%- include('../includes/header.ejs') %>
+<div class="min-h-full flex items-center justify-center py-12 px-4 mt-8 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+        <div>
+            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Create Center</h2>
+        </div>
+        <form class="mt-8 space-y-6" action="/Service" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="userId" value="<%= contact.userId %>" >
+            <div class="rounded-md shadow-sm -space-y-px">
+                <div>
+                    <label for="CName" class="sr-only">Center name</label>
+                    <input id="CName" name="CName" type="text" autocomplete="CName" required
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Center name"
+                        value="<%= typeof email != 'undefined' ? email : '' %>">
+                </div>
+                <div>
+                    <label for="st" class="sr-only">Service Type</label>
+                    <select name="serviceType" id="serviceType" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+                        <option>None...</option>
+                        <option value="Halls">Halls</option>
+                        <option value="Cars">Cars</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="address" class="sr-only">Address</label>
+                    <input id="address" name="address" type="text" autocomplete="address" required
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Address"
+                        value="<%= typeof password != 'undefined' ? password : '' %>">
+                </div>
+                <div>
+                    <label for="phoneNumber" class="sr-only">Phone Number</label>
+                    <input id="phoneNumber" name="phoneNumber" type="text" autocomplete="phoneNumber" required
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Phone Number"
+                        value="<%= typeof password != 'undefined' ? password : '' %>">
+                </div>
+                <div>
+                    <label for="Image" class="sr-only">Image</label>
+                    <input id="Image" name="img" type="file" autocomplete="Image" required
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Image"
+                        value="<%= typeof password != 'undefined' ? password : '' %>" multiple>
+                </div>
+                <div>
+                    <label for="Image" class="sr-only">Image</label>
+                    <textarea name="titleCenter" id="titleCenter" placeholder="Wirte some information about yoyr center"
+                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    ></textarea>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit"
+                    class="group text relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Send Data
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('../includes/footer.ejs') %>

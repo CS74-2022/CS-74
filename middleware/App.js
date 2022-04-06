@@ -22,7 +22,7 @@ module.exports = (app, passport) => {
     app.use(express.static('public/css'))
     app.use(express.static('public/js'))
     app.use(express.static('public/img'))
-    app.use( express.static('/imagesSite'))
+    app.use(express.static('images'))
     // Passport middleware
     app.use(passport.initialize());
     app.use(passport.session());

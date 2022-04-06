@@ -3,6 +3,7 @@ const {FirebaseStore, FirebaseAuth} = require('./firebase-admin')
 const app = express();
 const passport = require('passport')
 const auth = require('./routers/auth.routes')
+const service = require('./routers/service.routes')
 require('./Config/passport')(passport);
 require('./middleware/app')(app, passport);
 
@@ -14,6 +15,7 @@ app.get('/Home/:id', async (req, res)=>{
 })
 
 app.use(auth)
+app.use(service)
 app.listen(1999,()=>{
     console.log('http://localhost:1999')
 })
