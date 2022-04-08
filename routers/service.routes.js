@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {FirebaseStorageMultipleImageUploadMethod, FirebaseStorage, FirebaseStore} = require('../firebase-admin');;
+const { FirebaseStorage, FirebaseStore } = require('../firebase-admin');;
 const multer = require('../util/multer');
 
 // Get Pages
@@ -10,19 +10,19 @@ router.get('/service/:id', async (req, res) => {
 // Post
 router.post('/Service', multer.single('img'), async (req, res) => {
     const { CName, serviceType, address, phoneNumber, userId , titleCenter} = req.body;
-        const file = req.file.filename;
-        FirebaseStorage.bucket('gs://wedding-organizer-1.appspot.com').file(file, (err, res)=>{
+        const img = req.file.filename;
+        FirebaseStorage.bucket('gs://wedding-organizer-1.appspot.com').file(img, (err, res)=>{
             if (err) return res.status(500).send("upload image error")
             resolve({
                 res: res.secure_url
             })
-})
+        })
         FirebaseStore.collection('Service').doc(userId).set({
             CenterName: CName,
             serviceType: serviceType,
             address: address,
             phoneNumber: phoneNumber,
-            Image: file,
+            Image: img,
             dataInput: true,
             titleCenter: titleCenter
         }).then(()=>{

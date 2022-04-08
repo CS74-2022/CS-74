@@ -1,0 +1,46 @@
+<%- include('../includes/header.ejs') %>
+<div class="flex justify-center item-center h-screen bg-slate-200">
+    <div id="id" class="block bg-slate-50 p-6 rounded-xl shadow-md sadow-slate-300 w-3/4">
+        <input type="text" value="<%= contact.userId %>" name="userId" hidden>
+        <form action="/typesService" method="post" enctype="multipart/form-data">
+            <h2 class="text-blue-700 text-3xl font-semibold my-4">
+                Create Hall Data
+            </h2>
+            <div class="flex flex-row">
+                <div class="w-1/2 mr-1">
+                    <label for="title" class="text-sm">Title</label><br>
+                    <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+                </div>
+                <div class="w-1/2 mr-1">
+                    <label for="title" class="text-sm">Title</label><br>
+                    <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+                </div>
+            </div>
+            
+            <label for="title" class="text-sm">Cost</label><br>
+            <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+        
+            <label for="title" class="text-sm">Title</label><br>
+            <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+            <div class="flex flex-row">
+                <div class="w-1/2 mr-1">
+                    <label for="title" class="text-sm">Title</label><br>
+                    <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+                </div>
+                <div class="w-1/2 mr-1">
+                    <label for="title" class="text-sm">Title</label><br>
+                    <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+                </div>
+            </div>
+            <div>
+                <label for="Image" class="sr-only">Image</label>
+                <textarea name="titleCenter" id="titleCenter" cols="10" rows="100" placeholder="Wirte some information about yoyr center"
+                class="h-44 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600"
+                ></textarea>
+            </div>
+            <input type="submit" value="Send Data" class="bg-blue-700 w-full h-10 cursor-pointer text-white rounded-md hover:bg-blue-600">
+        </form>
+    </div>
+</div>
+
+<%- include('../includes/footer.ejs') %> 

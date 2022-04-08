@@ -3,14 +3,11 @@ const {FirebaseStorageMultipleImageUploadMethod, FirebaseStorage, FirebaseStore}
 const multer = require('../util/multer');
 
 // Get Pages
-router.get('/service/:id', async (req, res) => {
+router.get('/Types/:id', async (req, res) => {
     const doc = await FirebaseStore.collection("user").doc(req.params.id).get();
-    res.status(302).render('page/service', {contact: { id: doc.id, ...doc.data() }})
+    res.status(302).render('page/Types', {contact: { id: doc.id, ...doc.data() }})
 })
-// Post
-router.post('/Types', multer.single('img'), async (req, res) => {
-    
-})
+
 
 
 module.exports = router;
