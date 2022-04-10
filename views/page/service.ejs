@@ -4,7 +4,7 @@
         <div>
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Create Center</h2>
         </div>
-        <form class="mt-8 space-y-6" action="/Service" method="post" enctype="multipart/form-data">
+        <form class="mt-8 space-y-6" action="/Service" method="post">
             <input type="hidden" name="userId" value="<%= contact.userId %>" >
             <div class="rounded-md shadow-sm -space-y-px">
                 <div>
@@ -35,13 +35,6 @@
                         class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                         placeholder="Phone Number"
                         value="<%= typeof password != 'undefined' ? password : '' %>">
-                </div>
-                <div>
-                    <label for="Image" class="sr-only">Image</label>
-                    <input id="Image" name="img" type="file" autocomplete="Image" required
-                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                        placeholder="Image"
-                        value="<%= typeof password != 'undefined' ? password : '' %>" multiple>
                 </div>
                 <div>
                     <label for="Image" class="sr-only">Image</label>

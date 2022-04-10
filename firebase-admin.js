@@ -22,14 +22,4 @@ const FirebaseStorageMultipleImageUploadMethod = async file => {
     })
 }
 
-/*
-const urls = [];
-        const files = req.files;
-        for (const file of files) {
-          const { path } = file;
-          const newPath = await FirebaseStorageMultipleImageUploadMethod(path);
-          urls.push(newPath);
-        }
-*/
-
 module.exports = {FirebaseStorageMultipleImageUploadMethod, FirebaseStorage, FirebaseAuth, FirebaseStore};

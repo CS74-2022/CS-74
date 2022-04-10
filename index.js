@@ -10,9 +10,10 @@ require('./middleware/app')(app, passport);
 
 app.get('/Home/:id', async (req, res)=>{
     const doc = await FirebaseStore.collection("user").doc(req.params.id).get();
-    const doc2 = await FirebaseStore.collection("Service").doc(req.params.id).get();
+    const doc2 = await FirebaseStore.collection("service").doc(req.params.id).get();
+    const doc3 = await FirebaseStore.collection('DataCenter').doc(req.params.id).get();
 
-    res.status(302).render('page/hamePage', { contact: { id: doc.id, ...doc.data() }, service: {id: doc2.id, ...doc2.data()}})
+    res.status(302).render('page/hamePage', { contact: { id: doc.id, ...doc.data() }, service: {id: doc2.id, ...doc2.data()}, DataCenter: {id: doc3.id, ...doc3.data()}})
 })
 
 app.use(auth)

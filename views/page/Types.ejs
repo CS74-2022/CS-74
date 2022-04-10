@@ -17,24 +17,24 @@
                 </div>
             </div>
             
-            <label for="title" class="text-sm">Cost</label><br>
-            <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+            <label for="cost" class="text-sm">Cost</label><br>
+            <input type="number" min="1000" max="2000" value="1000" name="cost" id="cost" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
         
-            <label for="title" class="text-sm">Title</label><br>
-            <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+            <label for="title" class="text-sm">Cost Per Person</label><br>
+            <input type="text" name="cpp" id="title" min="100" max="1000" value="100" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
             <div class="flex flex-row">
                 <div class="w-1/2 mr-1">
-                    <label for="title" class="text-sm">Title</label><br>
-                    <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+                    <label for="title" class="text-sm">Chair Rang</label><br>
+                    <input type="text" name="cr" id="title" min="100" max="1000" value="100" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
                 </div>
                 <div class="w-1/2 mr-1">
-                    <label for="title" class="text-sm">Title</label><br>
-                    <input type="text" name="title" id="title" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600">
+                    <label for="title" class="text-sm">Images</label><br>
+                    <input type="file" name="image" id="image" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600" multiple>
                 </div>
             </div>
             <div>
-                <label for="Image" class="sr-only">Image</label>
-                <textarea name="titleCenter" id="titleCenter" cols="10" rows="100" placeholder="Wirte some information about yoyr center"
+                <label for="Image" class="sr-only">SubTitle</label>
+                <textarea name="SubTitle" id="SubTitle" cols="10" rows="100" placeholder="Wirte some information about yoyr center"
                 class="h-44 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600"
                 ></textarea>
             </div>
