@@ -9,18 +9,17 @@ router.get('/Types/:id', async (req, res) => {
 })
 
 // Post Data
-router.post('/typesService', multer.array('image', 5), async (req, res) => {
-
-            const userId = req.params.id
-            // Upload Images Function
-            const urls = [];
-            const files = req.files;
-            for (const file of files) {
-                const { path } = file;
-                const newPath = await FirebaseStorageMultipleImageUploadMethod(path);
-                urls.push(newPath);
-            }
-            
+router.post('/typesService', async (req, res) => {
+    const data = {
+        userId: req.body.userId,
+        CName: req.body.CName,
+        serviceType: req.body.serviceType,
+        address: req.body.address,
+        phoneNumber: req.body.phoneNumber,
+        titleCenter: req.body.titleCenter,
+        dataInput:true
+    }
+    console.log(data.userId)
 })
 
 module.exports = router;
